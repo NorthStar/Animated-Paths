@@ -92,7 +92,7 @@
     NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:
                            (id)font, kCTFontAttributeName,
                            nil];
-    NSAttributedString *attrString = [[NSAttributedString alloc] initWithString:@"Hello World!"
+    NSAttributedString *attrString = [[NSAttributedString alloc] initWithString:@"Yay CS 121!"
                                                                      attributes:attrs];
     CTLineRef line = CTLineCreateWithAttributedString((CFAttributedStringRef)attrString);
 	CFArrayRef runArray = CTLineGetGlyphRuns(line);
@@ -167,13 +167,13 @@
     self.penLayer.hidden = NO;
 
     CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    pathAnimation.duration = 10.0;
+    pathAnimation.duration = 5.0;
     pathAnimation.fromValue = [NSNumber numberWithFloat:0.0f];
     pathAnimation.toValue = [NSNumber numberWithFloat:1.0f];
     [self.pathLayer addAnimation:pathAnimation forKey:@"strokeEnd"];
     
     CAKeyframeAnimation *penAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-    penAnimation.duration = 10.0;
+    penAnimation.duration = 5.0;
     penAnimation.path = self.pathLayer.path;
     penAnimation.calculationMode = kCAAnimationPaced;
     penAnimation.delegate = self;
@@ -213,10 +213,10 @@
 
 
 // Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation 
-{
-    return UIInterfaceOrientationIsPortrait(interfaceOrientation);
-}
+//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+//{
+//    return UIInterfaceOrientationIsPortrait(interfaceOrientation);
+//}
 
 
 - (void) willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration

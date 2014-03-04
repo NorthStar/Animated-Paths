@@ -146,6 +146,13 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = T9HDTSCW4C;
+					};
+				};
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "AnimatedPaths" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -197,6 +204,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -204,6 +213,7 @@
 				GCC_PREFIX_HEADER = AnimatedPaths_Prefix.pch;
 				INFOPLIST_FILE = "AnimatedPaths-Info.plist";
 				PRODUCT_NAME = AnimatedPaths;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -211,11 +221,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AnimatedPaths_Prefix.pch;
 				INFOPLIST_FILE = "AnimatedPaths-Info.plist";
 				PRODUCT_NAME = AnimatedPaths;
+				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
